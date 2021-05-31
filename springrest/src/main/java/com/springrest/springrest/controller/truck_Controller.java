@@ -38,6 +38,12 @@ public class truck_Controller {
 		return this.ldservice.getLoad(Long.parseLong(loadId));
 	}
 	
+	@GetMapping("/load/{ShipperId}")
+	public List<load> getshipss(@PathVariable String ShipperId)
+	{
+		return this.ldservice.getships(Long.parseLong(ShipperId));
+	}
+	
 	@PostMapping("/load")
 	public load addentry(@RequestBody load led)
 	{

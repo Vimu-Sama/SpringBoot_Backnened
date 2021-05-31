@@ -70,5 +70,19 @@ public class LoadServiceImpl implements loadservice {
 		list= this.list.stream().filter(e->e.getloadid()!=cid).collect(Collectors.toList());
 		
 	}
+	@Override
+	public List<load> getships(long cid) {
+		List<load> l= null;
+		for(load lol:list)
+		{
+			if(lol.getShipperId()== cid)
+			{
+				l.add(lol);
+				break;
+			}
+		}
+		
+		return l;
+	}
 
 }
