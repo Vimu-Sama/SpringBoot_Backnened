@@ -11,4 +11,5 @@ public interface loadservice {
 	public load postload(load led);
 	public load updateload(load led);
 	public void deleteload(long cid);
+	public List<load> getships(long cid);
 }
